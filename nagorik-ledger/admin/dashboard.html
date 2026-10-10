@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0c0d0b">
+  <title>অ্যাডমিন ড্যাশবোর্ড — নাগরিক লেজার</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <script src="../js/auth.js"></script>
+  <script>Auth.guard()</script>
+</head>
+<body>
+  <a class="skip" href="#main">মূল অংশে যান</a>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="adm-header">
+    <a class="brand" href="../index.html" style="display:flex;gap:10px;align-items:center;text-decoration:none">
+      <span class="brand-mark" style="width:37px;height:37px;border:1px solid var(--accent);display:grid;place-items:center;color:var(--accent);font-weight:800;border-radius:50%">ন</span>
+      <b>নাগরিক লেজার <small style="color:var(--muted);font-weight:400">অ্যাডমিন</small></b>
+    </a>
+    <div class="adm-actions">
+      <span class="chip" id="timer" title="নিষ্ক্রিয় থাকলে সেশন শেষ হবে"></span>
+      <a class="btn btn-ghost btn-small" href="../index.html">ওয়েবসাইট দেখুন</a>
+      <button class="btn btn-small" id="logout" type="button">লগআউট</button>
+    </div>
+  </header>
+
+  <main class="adm-main" id="main">
+    <p class="eyebrow">অ্যাডমিন প্যানেল</p>
+    <h1>রিপোর্ট ব্যবস্থাপনা</h1>
+    <section class="kpis" id="kpis" aria-label="অবস্থা অনুযায়ী ফিল্টার"></section>
+    <div class="toolbar">
+      <input class="field" id="q" type="search" placeholder="শিরোনাম, এলাকা বা সেবা খুঁজুন..." aria-label="রিপোর্ট খুঁজুন">
+      <button class="btn btn-ghost" id="export" type="button">JSON ডাউনলোড</button>
+      <button class="btn btn-ghost" id="reset" type="button">ডেমো ডেটা রিসেট</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>রিপোর্ট</th><th>সেবা</th><th>এলাকা</th><th>তারিখ</th><th>অবস্থা</th><th>কাজ</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p class="empty" id="empty" hidden>এই ফিল্টারে কোনো রিপোর্ট নেই।</p>
+    </div>
+    <p class="adm-note">ডেটা এই ব্রাউজারের localStorage-এ সংরক্ষিত। প্রকৃত সার্ভার ও ডাটাবেস যুক্ত করলে একাধিক ডিভাইসে কাজ করবে।</p>
+  </main>
+  <footer class="adm-foot">Developer: <strong>MD ATIQUL ISLAM (Atik)</strong> • <a href="mailto:atik.cmttiu1001@gmail.com">atik.cmttiu1001@gmail.com</a></footer>
+
+  <script src="../js/store.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

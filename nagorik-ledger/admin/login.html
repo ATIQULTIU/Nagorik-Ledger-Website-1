@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0c0d0b">
+  <title>অ্যাডমিন লগইন — নাগরিক লেজার</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main class="auth">
+    <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i></div>
+    <div class="auth-card" id="card">
+      <p class="eyebrow">নাগরিক লেজার • অ্যাডমিন</p>
+      <h1>লগইন করুন</h1>
+      <p>রিপোর্ট অনুমোদন ও ব্যবস্থাপনার জন্য অ্যাডমিন অ্যাকাউন্টে ঢুকুন।</p>
+      <form id="loginForm" novalidate>
+        <label class="lbl">ইউজারনেম
+          <input class="field" id="user" name="user" autocomplete="username" required autofocus>
+        </label>
+        <label class="lbl">পাসওয়ার্ড
+          <span class="pw">
+            <input class="field" id="pass" name="pass" type="password" autocomplete="current-password" required>
+            <button type="button" id="toggle" aria-pressed="false">দেখান</button>
+          </span>
+        </label>
+        <p class="msg error" id="msg" role="alert" hidden></p>
+        <button class="btn" id="submit" type="submit">লগইন</button>
+      </form>
+      <div class="auth-links"><a href="../index.html">← ওয়েবসাইটে ফিরুন</a></div>
+      <p class="auth-dev">Developer: MD ATIQUL ISLAM (Atik) • <a href="mailto:atik.cmttiu1001@gmail.com">atik.cmttiu1001@gmail.com</a></p>
+    </div>
+  </main>
+  <script src="../js/ui.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>
